@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Azure Bay Resort | Luxury Hospitality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dfe0e0",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-tint": "#515f78",
+                        "secondary": "#5d5f5f",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container": "#eceef0",
+                        "on-secondary-container": "#616363",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#001a42",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c5c6cd",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#3980f4",
+                        "tertiary-fixed": "#d8e2ff",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#0d1c32",
+                        "tertiary": "#000000",
+                        "on-surface": "#191c1e",
+                        "primary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#76849f",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#b9c7e4",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-surface-variant": "#44474d",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001a42",
+                        "outline": "#75777e",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "section-padding-mobile": "64px",
+                        "container-max": "1280px",
+                        "section-padding-desktop": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(180deg, rgba(25, 28, 30, 0) 0%, rgba(25, 28, 30, 0.4) 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-inverse-surface/80 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-inverse-primary" href="#">
+                Azure Bay Resort
+            </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 font-label-caps text-label-caps scale-95 transition-transform duration-150" href="#">Home</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-caps text-label-caps hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/10 transition-all duration-300 px-3 py-2 rounded" href="#">Rooms</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-caps text-label-caps hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/10 transition-all duration-300 px-3 py-2 rounded" href="#">Facilities</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-caps text-label-caps hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/10 transition-all duration-300 px-3 py-2 rounded" href="#">Gallery</a>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 transition-colors">Book Now</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-secondary-container">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A breathtaking, expansive view of a luxury tropical resort at golden hour. Infinity pools seamlessly blend with the azure ocean, surrounded by pristine white sands and lush palm trees. The scene is bathed in warm, cinematic sunlight, evoking a sense of absolute serenity and premium hospitality. High-end modern architectural details frame the shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2HI9G30puVv78NtzzITtR1gTkl9B8gM_cXLppb275Wxs2ywr84Dyf0GQmztVPQNtWf-dqlD_qThQR8X4jiItETOV4GnnPkTQFTGtCskYeCjdoVvIa6zgWKwKFM6MuKBhTeUZ3gWzwoUAydMIxaRi6PqVOmkXayPiRZJzbr-BQwDM4oubKpZyxL4XyH36PS7tHXTvHkEP-Ip_v0USHHSr7pWGnFfkLzh8WAkhQftI899KjrkIIV0Km3ZvLmfrJyElrBMA-43irbOk">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+<span class="text-on-primary font-label-caps text-label-caps tracking-[0.2em] mb-4 opacity-90">WELCOME TO PARADISE</span>
+<h1 class="text-display-lg font-display-lg text-on-primary mb-8 drop-shadow-lg">Escape to Azure Bay</h1>
+<p class="text-body-lg font-body-lg text-on-primary/90 mb-10 max-w-2xl">Experience unparalleled luxury where the ocean meets the sky. A sanctuary of peace, designed for the discerning traveler.</p>
+<button class="bg-surface-container-lowest text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-surface transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
+                Book Your Stay <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Resort Intro (Bento Grid) -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Text Content -->
+<div class="md:col-span-5 flex flex-col justify-center pr-8">
+<span class="text-primary font-label-caps text-label-caps mb-4">THE EXPERIENCE</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-6">Redefining Coastal Elegance</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">Azure Bay Resort is more than a destination; it's a curated experience. Every architectural detail, culinary offering, and bespoke service is designed to elevate your senses and provide an unforgettable retreat from the ordinary.</p>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-2 hover:text-on-surface-variant transition-colors group" href="#">
+                    Discover Our Story 
+                    <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+<!-- Bento Images -->
+<div class="md:col-span-7 grid grid-cols-2 gap-4">
+<div class="col-span-2 h-[300px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img alt="Luxury Spa" class="w-full h-full object-cover" data-alt="A tranquil, minimalist luxury spa interior. Sunlight streams through slatted wooden blinds, casting geometric shadows across a smooth, light stone floor. A sleek, modern massage table sits in the center, surrounded by minimal decor and a muted, earthy color palette, creating a serene and premium atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLRi8MrDt5IkbSVc5TwxWS4eJS8rJje0qaNNRWEsAa9UvlwH2xf-Jhw-0npOEDceKDuPGoemHSy_eV22qjQYxvEUJ6Krd1vVj7iZzAytUANIteM0PR83EmxxcpbgUi_qp6XQkyAOCrugWa6GRTQyrzqSLTzyWJIivC_ZqVBSyZzbRVriApngtL96p-YduMNecFmngi08nQGq0X-In46PaOM5lw9Mp4MFft0YRw9YnoUDLnmOk_cyj8funEBV8xsQQ88PAtrBAmrX4">
+</div>
+<div class="h-[250px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img alt="Fine Dining" class="w-full h-full object-cover" data-alt="A beautifully plated gourmet dish in a high-end restaurant setting. The lighting is moody and intimate, highlighting the intricate textures of the food. The table setting features sleek, modern cutlery and a pristine white tablecloth, emphasizing the resort's commitment to culinary excellence and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-drmBBnRkAeGB5oPovM0gOYgs3AZLk7-BsKi4rW7DnJvNP0cnV4JzUSkB-CUGxjJge37kT8ELtKZsLCxP8spJ_Q9UyaOB6SNMLLVCB_r0_Ybd6M1i6ErQa3n7Y28in3qP-Ij0c_gQk-U4SJIOpIa_ale8fl3foBKmbaqNyrLF5sIRw8nQD7tzBdn1yZuePHl4j5YmDeb04ZfLpvlPhHZU1zqqNiTAfjttfZ2bGqKZ5QYCq3GwU9td24g6Z9G5dON82Yc__Q_kWK8">
+</div>
+<div class="h-[250px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img alt="Ocean View" class="w-full h-full object-cover" data-alt="A stunning, expansive view from a luxury resort balcony overlooking a crystal-clear, azure ocean. The minimalist glass railing frames the vast horizon. The sky is bright and clear, reflecting the premium, serene vibe of a high-end coastal retreat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31UBOnFfbIzAfObj6sbm6Hjuv8TqhjhE0Ir1BxcOPIUD9t6ZvZnrsYamV2DSixUAQOHaGVqnkDSJ3zUyeLrt2Rf-64Tjr69CRg_U5y8uFc4lxVXGNPi-Ar3FE_DGM485_BJrzwvV8t26qHDzvuxNdJoK-M0Ke6OIMuPRoKFt8zuDFDJwMqkdFv2K6CyhF4YUY7iU_s5pYcB2xj3ASY99LT405FV0k73qm3_R43kN-BgRiVjYfYqzwePt2YhxQD7wCxBQiagwfq00">
+</div>
+</div>
+</div>
+</section>
+<!-- Luxury Accommodations -->
+<section class="py-section-padding-desktop bg-surface-container-low">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-label-caps text-label-caps mb-4 block">STAY</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Luxury Accommodations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Room Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(10,25,47,0.04)] hover:-translate-y-1 hover:shadow-[0_15px_50px_rgba(10,25,47,0.08)] transition-all duration-300 border border-outline-variant/30">
+<div class="h-[240px] relative">
+<img alt="Ocean Suite" class="w-full h-full object-cover" data-alt="A modern, high-end hotel suite featuring a plush king-sized bed with crisp white linens. Floor-to-ceiling windows offer a spectacular view of the ocean. The interior design is minimalist, utilizing a color palette of soft whites, light woods, and deep navy accents, exuding a sense of refined coastal luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOZmuT_rD-Vs2cCSgJ2c04S9RaiE52BB6FE6LgWZyF_8Z_SnJFUFudTuJwAAuaveZTq3h2IzXbsaqfGba_DXMhSRJWL2wFLOt57-0G_I9gCyogsvIcguNcu66qd7PQVBTUcq0WSjaNl2KypXEaBWrVkzncMpJyoES6tBt3cCtpqrmtkwe2rsbcfuoEJeHnqb0PsGKU2kFMZCWNXdKui7DBQGJM6fReO9VdJRpqDm7kVPF-9eIOdjOFrJ6n4N69iV-MCzwhroGyT1o">
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 text-[24px]">Oceanfront Suite</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Panoramic views of the azure bay from your private terrace, complete with bespoke furnishings.</p>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="text-primary font-label-caps text-label-caps">FROM $850 / NIGHT</span>
+<button class="text-primary hover:text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Room Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(10,25,47,0.04)] hover:-translate-y-1 hover:shadow-[0_15px_50px_rgba(10,25,47,0.08)] transition-all duration-300 border border-outline-variant/30">
+<div class="h-[240px] relative">
+<img alt="Villa" class="w-full h-full object-cover" data-alt="A luxurious private resort villa with an expansive minimalist interior leading out to a secluded plunge pool. The design features clean lines, natural stone floors, and expansive glass doors that blur the line between indoor and outdoor living. The mood is exclusive, serene, and highly premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0KKdDLBWWoAf5kCSi7ESis5H8KRdkQ0Zr6mHxSZ3v6PY_gillGrNGwa4Q2zNyHQjkYFpK9n2AZ4RN_gq6XhziGH3_bQ97ja16c4ys7aMZ8FCmDXw-zqOa_PhwWgQVfruABbvpH4hdkeQLTV68m1NMt2IqWOy6C_14vvk3_9tG_a8NphVv9sq4Xv_WodJ2J1MCTPqd2hAUvBtmEcM9gN4tSqt_60anvjhoqb7a0-AeA_aqsTcC2p_ynszxV0pRdG1L8Xd6wFrT1HA">
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 text-[24px]">Private Pool Villa</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Ultimate privacy with your own infinity plunge pool, lush tropical garden, and dedicated butler service.</p>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="text-primary font-label-caps text-label-caps">FROM $1,400 / NIGHT</span>
+<button class="text-primary hover:text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Room Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(10,25,47,0.04)] hover:-translate-y-1 hover:shadow-[0_15px_50px_rgba(10,25,47,0.08)] transition-all duration-300 border border-outline-variant/30">
+<div class="h-[240px] relative">
+<img alt="Penthouse" class="w-full h-full object-cover" data-alt="An ultra-luxury penthouse suite bathroom featuring a large, freestanding modern soaking tub. The space is clad in elegant, light marble. Large windows overlook a stunning coastal landscape. The lighting is soft and natural, emphasizing the pristine, high-end hospitality environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnXNq9GBGTr7HeyJu1OC1f4IW__J5q6fnNqpmcxO9L6XgFvUvTD1iSD4o4FiieOFFhKdhsh6gmwdgWvqVHLw576SEiu5R-NZgq6RMAFKjFSOvgMKLd7EVBzVfJmmv9wvAXcOqm67M7hzTRICZ-itAKSnMy9PaaeBTj6lKwyijW8AaIpdoNd-fFKKZCISicQPfdpcXeV3anJ6tRD6RbMcKTAGElpYgKlP2V1naIp-E7KTWLqv3CKOvbVJp_eY-ES_dGVoioJQ_kjO4">
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 text-[24px]">The Azure Penthouse</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">The pinnacle of luxury. A sprawling residence offering 360-degree views, a private spa room, and grand living spaces.</p>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="text-primary font-label-caps text-label-caps">FROM $3,200 / NIGHT</span>
+<button class="text-primary hover:text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-transparent border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    View All Rooms
+                </button>
+</div>
+</div>
+</section>
+<!-- World-Class Amenities -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<span class="text-primary font-label-caps text-label-caps mb-4 block">FACILITIES</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">World-Class Amenities</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">Curated facilities designed to rejuvenate the body and inspire the mind, set against the backdrop of paradise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Amenity 1 -->
+<div class="flex flex-col items-start p-6 bg-surface rounded-xl hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px] text-primary mb-4" style="font-variation-settings: 'FILL' 1;">pool</span>
+<h4 class="text-headline-md font-headline-md text-[20px] text-on-surface mb-2">Infinity Pools</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Three cascading pools blending seamlessly with the ocean horizon.</p>
+</div>
+<!-- Amenity 2 -->
+<div class="flex flex-col items-start p-6 bg-surface rounded-xl hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px] text-primary mb-4" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h4 class="text-headline-md font-headline-md text-[20px] text-on-surface mb-2">Serenity Spa</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Award-winning treatments using indigenous botanical ingredients.</p>
+</div>
+<!-- Amenity 3 -->
+<div class="flex flex-col items-start p-6 bg-surface rounded-xl hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px] text-primary mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h4 class="text-headline-md font-headline-md text-[20px] text-on-surface mb-2">Michelin Dining</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Five distinct culinary venues guided by renowned executive chefs.</p>
+</div>
+<!-- Amenity 4 -->
+<div class="flex flex-col items-start p-6 bg-surface rounded-xl hover:bg-surface-container-low transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px] text-primary mb-4" style="font-variation-settings: 'FILL' 1;">directions_boat</span>
+<h4 class="text-headline-md font-headline-md text-[20px] text-on-surface mb-2">Private Marina</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Exclusive yacht charters and personalized coastal excursions.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant dark:border-outline bg-surface-container-lowest dark:bg-inverse-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-padding-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1 flex flex-col items-start">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary mb-4">Azure Bay Resort</span>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 text-sm">Defining luxury hospitality through exceptional design and flawless service.</p>
+<div class="text-on-surface-variant dark:text-on-secondary-container text-sm">© 2026 Azure Bay Resort. All rights reserved.</div>
+</div>
+<!-- Links -->
+<div class="col-span-1 md:col-span-3 flex justify-end gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary">NAVIGATION</span>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 ease-in-out font-body-md text-body-md text-sm" href="#">Sitemap</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 ease-in-out font-body-md text-body-md text-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 ease-in-out font-body-md text-body-md text-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 ease-in-out font-body-md text-body-md text-sm" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

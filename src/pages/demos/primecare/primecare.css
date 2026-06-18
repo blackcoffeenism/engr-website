@@ -1,0 +1,221 @@
+/* PrimeCare Medical Clinic Theme — clean medical blue/white palette */
+:root {
+  --pc-primary: #006bb3;
+  --pc-primary-dark: #004d80;
+  --pc-accent: #00b09c;
+  --pc-light: #f0f7ff;
+  --pc-text: #0d2d4a;
+}
+
+.pc-hero {
+  background: linear-gradient(135deg, var(--pc-primary-dark) 0%, var(--pc-primary) 60%, #0091d4 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-hero::before {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.pc-hero::after {
+  content: '';
+  position: absolute;
+  right: 100px;
+  bottom: -150px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.pc-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.pc-hero__eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.pc-hero__title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) { .pc-hero__title { font-size: 44px; } }
+@media (max-width: 640px) { .pc-hero__title { font-size: 34px; } .pc-hero { padding: 72px 0; } }
+
+.pc-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 40px;
+}
+
+/* Stats bar */
+.pc-stats-bar {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,107,179,0.12);
+  box-shadow: 0 4px 20px rgba(0,107,179,0.08);
+}
+
+.pc-stats-bar .dp-stat__value { color: var(--pc-primary); }
+.pc-stats-bar .dp-stat__label { color: #75777e; }
+
+/* Buttons */
+.pc-btn--primary {
+  background-color: var(--pc-primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,107,179,0.3);
+}
+
+.pc-btn--outline {
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.65);
+}
+
+.pc-btn--outline:hover { background-color: rgba(255,255,255,0.12); }
+
+.pc-btn--outline-dark {
+  color: var(--pc-primary);
+  border: 1.5px solid var(--pc-primary);
+}
+
+.pc-btn--outline-dark:hover { background-color: var(--pc-light); }
+
+/* Service card */
+.pc-service-card {
+  padding: 32px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0,107,179,0.1);
+  box-shadow: 0 4px 20px rgba(0,107,179,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pc-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,107,179,0.1);
+}
+
+.pc-service-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: var(--pc-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pc-primary);
+  margin-bottom: 20px;
+}
+
+.pc-service-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pc-text);
+  margin-bottom: 10px;
+}
+
+.pc-service-card__desc {
+  font-size: 14px;
+  color: #44474d;
+  line-height: 1.65;
+}
+
+/* Doctor card */
+.pc-doctor-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,107,179,0.1);
+  box-shadow: 0 4px 20px rgba(0,107,179,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pc-doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,107,179,0.12);
+}
+
+.pc-doctor-card__img {
+  height: 240px;
+  background: linear-gradient(135deg, #d0e8f8, #b8d8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-doctor-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-doctor-card__body {
+  padding: 24px;
+}
+
+.pc-doctor-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pc-text);
+  margin-bottom: 4px;
+}
+
+.pc-doctor-card__specialty {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pc-primary);
+  margin-bottom: 12px;
+}
+
+.pc-doctor-card__bio {
+  font-size: 14px;
+  color: #44474d;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* CTA */
+.pc-cta {
+  background: linear-gradient(135deg, var(--pc-primary-dark) 0%, var(--pc-primary) 100%);
+}
+
+/* Appointment form */
+.pc-apt-card {
+  background: #fff;
+  border: 1px solid rgba(0,107,179,0.1);
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: 0 8px 40px rgba(0,107,179,0.06);
+}
+
+@media (max-width: 640px) { .pc-apt-card { padding: 28px; } }
