@@ -132,6 +132,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              <div className="form-group">
+                <label htmlFor="websiteUrl" className="form-label">Website URL (Optional)</label>
+                <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https://yourbusiness.com" className="form-input" />
+              </div>
+
               <div className="contact-form__row">
                 <div className="form-group">
                   <label htmlFor="industry" className="form-label">Industry Sector</label>

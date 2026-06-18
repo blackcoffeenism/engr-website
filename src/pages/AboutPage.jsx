@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import './AboutPage.css'
@@ -26,6 +27,41 @@ const values = [
 ]
 
 export default function AboutPage() {
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setErrorMsg('')
+
+    const form = e.target
+    const formData = new FormData(form)
+
+    formData.append('access_key', 'be26fb14-6c03-42fb-8c9b-453be1c8bc94')
+    formData.append('subject', 'New Website Audit Request (About Page)')
+    formData.append('from_name', 'E-N-G-R About Page Audit')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      const data = await response.json()
+      if (data.success) {
+        setSubmitted(true)
+        form.reset()
+      } else {
+        setErrorMsg(data.message || 'Something went wrong. Please try again.')
+      }
+    } catch (err) {
+      setErrorMsg('Failed to connect to the server. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="about">
       <SEO
@@ -111,30 +147,45 @@ export default function AboutPage() {
               <h2 className="audit-card__title">Request Free Website Audit</h2>
               <p className="audit-card__subtitle">Let's analyze your current presence and engineer a better path forward.</p>
             </div>
-            <form className="audit-form">
-              <div className="audit-form__row">
-                <div className="form-group">
-                  <label htmlFor="audit-name" className="form-label">Full Name</label>
-                  <input id="audit-name" type="text" placeholder="Jane Doe" className="form-input" />
+            {submitted ? (
+              <div className="contact-success" style={{ textAlign: 'center', padding: '24px 0' }}>
+                <span className="material-symbols-outlined" style={{ fontSize: 48, color: 'var(--color-primary)', marginBottom: 16, display: 'block' }}>check_circle</span>
+                <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--color-primary)', marginBottom: 12 }}>Audit Request Sent!</h3>
+                <p style={{ fontSize: 15, color: 'var(--color-on-surface-variant)', lineHeight: 1.6, maxWidth: 460, margin: '0 auto' }}>
+                  Thank you for requesting a free website audit. Our strategy team will review your online presence and get in touch at your email within 24 hours.
+                </p>
+              </div>
+            ) : (
+              <form className="audit-form" onSubmit={handleSubmit}>
+                <div className="audit-form__row">
+                  <div className="form-group">
+                    <label htmlFor="audit-name" className="form-label">Full Name</label>
+                    <input id="audit-name" name="fullName" type="text" placeholder="Jane Doe" required className="form-input" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="audit-email" className="form-label">Business Email</label>
+                    <input id="audit-email" name="email" type="email" placeholder="jane@company.com" required className="form-input" />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="audit-email" className="form-label">Business Email</label>
-                  <input id="audit-email" type="email" placeholder="jane@company.com" className="form-input" />
+                  <label htmlFor="audit-url" className="form-label">Current Website URL (Optional)</label>
+                  <input id="audit-url" name="websiteUrl" type="url" placeholder="https://yourbusiness.com" className="form-input" />
                 </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="audit-url" className="form-label">Current Website URL (Optional)</label>
-                <input id="audit-url" type="url" placeholder="https://yourbusiness.com" className="form-input" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="audit-message" className="form-label">Briefly describe your goals</label>
-                <textarea id="audit-message" rows="4" placeholder="We are looking to modernize our online presence..." className="form-input form-textarea" />
-              </div>
-              <button type="submit" id="about-audit-submit-btn" className="btn btn--primary">
-                Request Audit
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
-              </button>
-            </form>
+                <div className="form-group">
+                  <label htmlFor="audit-message" className="form-label">Briefly describe your goals</label>
+                  <textarea id="audit-message" name="message" rows="4" placeholder="We are looking to modernize our online presence..." className="form-input form-textarea" required />
+                </div>
+                {errorMsg && (
+                  <div style={{ color: '#ef4444', fontSize: 14, marginBottom: 12, textAlign: 'left' }}>
+                    {errorMsg}
+                  </div>
+                )}
+                <button type="submit" id="about-audit-submit-btn" disabled={loading} className="btn btn--primary">
+                  {loading ? 'Requesting...' : 'Request Audit'}
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>
