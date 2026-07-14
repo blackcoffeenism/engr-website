@@ -1,6 +1,39 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import bhriMockup from '../assets/bhri.png'
+import vhbcMockup from '../assets/vhbcreferral.jpeg'
 import './ProjectsPage.css'
+
+const clientProjects = [
+  {
+    id: 'bhri',
+    title: 'Bright Hermosa Realty Inc.',
+    category: 'Real Estate Platform',
+    categoryIcon: 'home',
+    desc: 'A premium, modern property listing and search portal built for a prominent real estate agency. Features an advanced filter system, responsive grids, and elegant typography.',
+    link: 'https://bhri.com.ph',
+    image: bhriMockup,
+    features: [
+      { icon: 'home_work', label: 'Luxury Listing Showcases' },
+      { icon: 'filter_alt', label: 'Advanced Search Filtering' },
+      { icon: 'devices', label: 'Fully Fluid Responsive UI' },
+    ],
+  },
+  {
+    id: 'vhbc',
+    title: 'VHBC Referral Program',
+    category: 'Web Application',
+    categoryIcon: 'dashboard',
+    desc: 'A fully custom referral tracking and partner dashboard application. Features dynamic pipelines, real-time earnings charts, user rewards tracking, and interactive status boards.',
+    link: 'https://referral.vhbc.com.ph',
+    image: vhbcMockup,
+    features: [
+      { icon: 'view_kanban', label: 'Visual Referral Pipelines' },
+      { icon: 'query_stats', label: 'Dynamic Earnings Graphs' },
+      { icon: 'workspace_premium', label: 'Rewards Tracking System' },
+    ],
+  },
+]
 
 const projects = [
   {
@@ -56,14 +89,69 @@ export default function ProjectsPage() {
       />
       {/* Hero */}
       <section className="projects-hero container">
-        <h1 className="projects-hero__title">Explore Our Demo Projects</h1>
+        <h1 className="projects-hero__title">Our Work & Concept Demos</h1>
         <p className="projects-hero__subtitle">
-          These are concept designs and sample projects created to demonstrate website capabilities for different industries.
+          Explore our real-world production platforms built for clients, alongside interactive sandbox concept designs.
         </p>
       </section>
 
-      {/* Projects Grid */}
-      <section className="projects-grid-section container">
+      {/* Client Projects Section */}
+      <section className="projects-section container">
+        <div className="projects-section-header">
+          <span className="projects-section-badge">Featured Client Work</span>
+          <h2 className="projects-section-title">Production Web Applications</h2>
+        </div>
+        <div className="projects-grid">
+          {clientProjects.map((project) => (
+            <article key={project.id} className="project-card">
+              <div className="project-card__image-wrap">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-card__image"
+                  loading="lazy"
+                />
+                <div className="project-card__badge">
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>{project.categoryIcon}</span>
+                  {project.category}
+                </div>
+              </div>
+
+              <div className="project-card__body">
+                <h2 className="project-card__title">{project.title}</h2>
+                <p className="project-card__desc">{project.desc}</p>
+
+                <ul className="project-card__features">
+                  {project.features.map(({ icon, label }) => (
+                    <li key={label} className="project-card__feature">
+                      <span className="material-symbols-outlined project-card__feature-icon">{icon}</span>
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id={`project-card-link-${project.id}`}
+                  className="btn btn--outline btn--full-mobile"
+                >
+                  Visit Live Site
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>open_in_new</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Demo Projects Section */}
+      <section className="projects-section projects-section--demos container">
+        <div className="projects-section-header">
+          <span className="projects-section-badge font-accent">Interactive Sandboxes</span>
+          <h2 className="projects-section-title">Industry Concept Demos</h2>
+        </div>
         <div className="projects-grid">
           {projects.map((project) => (
             <article key={project.id} className="project-card">

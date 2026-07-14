@@ -264,3 +264,64 @@
   max-width: 560px;
   line-height: var(--line-height-body-lg);
 }
+
+/* ===========================
+   Projects Sections Styling
+   =========================== */
+.projects-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  max-width: var(--container-max);
+}
+
+.projects-section--demos {
+  border-top: 1px dashed var(--color-outline-variant);
+  margin-top: 64px;
+  padding-top: 80px;
+}
+
+.projects-section-header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.projects-section-badge {
+  display: inline-block;
+  font-size: var(--font-size-label-caps);
+  font-weight: var(--font-weight-label-caps);
+  letter-spacing: var(--letter-spacing-label-caps);
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  margin-bottom: 8px;
+}
+
+.projects-section-badge.font-accent {
+  color: var(--color-outline);
+}
+
+.projects-section-title {
+  font-size: 32px;
+  font-weight: var(--font-weight-headline-md);
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .projects-section-title {
+    font-size: 26px;
+  }
+}
+
+/* Align 2-column grid for client projects */
+.projects-section:not(.projects-section--demos) .projects-grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .projects-section:not(.projects-section--demos) .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,6 +1,31 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import bhriMockup from '../assets/bhri.png'
+import vhbcMockup from '../assets/vhbcreferral.jpeg'
 import './HomePage.css'
+
+const recentProjects = [
+  {
+    id: 'bhri',
+    title: 'Bright Hermosa Realty Inc.',
+    category: 'Real Estate Platform',
+    categoryIcon: 'home',
+    desc: 'A premium, modern property listing and search portal built for a prominent real estate agency. Features an advanced filter system, responsive grids, and elegant typography.',
+    link: 'https://bhri.com.ph',
+    image: bhriMockup,
+    features: ['Luxury Listings Showcase', 'Interactive Property Search', 'Mobile-Responsive Layout']
+  },
+  {
+    id: 'vhbc',
+    title: 'VHBC Referral Program',
+    category: 'Web Application',
+    categoryIcon: 'dashboard',
+    desc: 'A fully custom referral tracking and partner dashboard application. Features dynamic pipelines, real-time earnings charts, user rewards tracking, and interactive status boards.',
+    link: 'https://referral.vhbc.com.ph',
+    image: vhbcMockup,
+    features: ['Referral Status Pipeline', 'Live Earnings Dashboard', 'Partner Rewards Hub']
+  }
+]
 
 const industries = [
   { icon: 'restaurant', title: 'Restaurants', desc: 'Menu integrations, online reservations, and appetizing visual galleries.' },
@@ -115,6 +140,60 @@ export default function HomePage() {
                 <h3 className="service-card__title">{title}</h3>
                 <p className="service-card__desc">{desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Projects Section */}
+      <section className="recent-projects" id="recent-projects">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">Client Work</span>
+            <h2 className="section-title">Recent Projects</h2>
+            <p className="section-subtitle">
+              Take a look at some of the production-grade platforms and websites we've engineered for our clients.
+            </p>
+          </div>
+          <div className="recent-projects__grid">
+            {recentProjects.map((project) => (
+              <article key={project.id} className="recent-project-card">
+                <div className="recent-project-card__image-wrap">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="recent-project-card__image"
+                    loading="lazy"
+                  />
+                  <div className="recent-project-card__badge">
+                    <span className="material-symbols-outlined" style={{ fontSize: 16 }}>{project.categoryIcon}</span>
+                    {project.category}
+                  </div>
+                </div>
+                <div className="recent-project-card__body">
+                  <h3 className="recent-project-card__title">{project.title}</h3>
+                  <p className="recent-project-card__desc">{project.desc}</p>
+
+                  <ul className="recent-project-card__features">
+                    {project.features.map((feat) => (
+                      <li key={feat} className="recent-project-card__feature">
+                        <span className="material-symbols-outlined recent-project-card__feature-icon">check_circle</span>
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--outline btn--full-mobile recent-project-card__link"
+                  >
+                    Visit Live Site
+                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>open_in_new</span>
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </div>
